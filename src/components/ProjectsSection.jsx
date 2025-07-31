@@ -1,26 +1,40 @@
-import { ArrowRight, Github } from "lucide-react";
 
 const projects = [
   {
     id: 1,
-    title: "Receipt Predictions",
-    description: "Java application demonstrating SHA-1 password hashing and brute-force cracking, with efficient storage and lookup via binary search trees.",
-    tags: ["Machine Learning", "PyTorch", "Flask", "Docker"],
-    githubUrl: "https://github.com/ekamghotra/receiptpredictions",
+    title: "Time Series ETF Forecaster",
+    description: "Advanced forecasting system implementing rolling ARIMA and GARCH models to predict ETF returns, enhanced with Vector Autoregression using macro signals, and featuring a comprehensive backtesting pipeline with automated performance dashboards.",
+    tags: ["Python", "Pandas", "Statsmodels", "scikit-learn", "Matplotlib"],
   },
   {
     id: 2,
-    title: "Password Cracker",
-    description: "Flask-powered web app that forecasts monthly receipt counts for the year 2022 using an LSTM neural network, containerized with Docker and featuring interactive table and chart visualizations.",
-    tags: ["Java", "Data Structures", "Hashing"],
-    githubUrl: "https://github.com/ekamghotra/PasswordCracker",
+    title: "Portfolio Analytics Toolkit",
+    description: "Python toolkit leveraging Pandas and NumPy for comprehensive portfolio analysis including time series analysis, Monte Carlo simulations for VaR estimation, and Markowitz optimization to identify efficient frontier optimal asset mix.",
+    tags: ["Python", "Pandas", "NumPy", "SciPy"],
   },
   {
     id: 3,
+    title: "Social Media Sentiment Trader",
+    description: "Automated trading system that analyzes daily tweets using FinBERT sentiment analysis, translates high-confidence signals into paper trading orders, and tracks performance through SQLite logging with Jupyter dashboard visualization.",
+    tags: ["Python", "Pandas", "NumPy", "finBERT", "SQLite"],
+  },
+  {
+    id: 4,
+    title: "Receipt Predictions",
+    description: "Flask-powered web app that forecasts monthly receipt counts for the year 2022 using an LSTM neural network, containerized with Docker and featuring interactive table and chart visualizations.",
+    tags: ["Machine Learning", "PyTorch", "Flask", "Docker"],
+  },
+  {
+    id: 5,
+    title: "Password Cracker",
+    description: "Java application demonstrating SHA-1 password hashing and brute-force cracking, with efficient storage and lookup via binary search trees.",
+    tags: ["Java", "Data Structures", "Hashing"],
+  },
+  {
+    id: 6,
     title: "Virtual Stock Assistant Chatbot",
     description: "Stock market assistant powered by ChatGPT with real-time data via Yahoo Finance API, supporting SMA, EMA, RSI, and MACD.",
     tags: ["Python", "ChatGPT", "Yahoo Finance API"],
-    githubUrl: "https://github.com/ekamghotra/VirtualStockAsisstantChatbot",
   },
 ];
 
@@ -44,25 +58,12 @@ export const ProjectsSection = () => {
                   </span>
                 ))}
               </div>
-              <div className="flex justify-center items-center gap-2">
-                <strong>GitHub Repo Here</strong>
-                <a href={project.githubUrl} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
-                  <Github size={20} />
-                </a>
-              </div>
+
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <a
-            className="cosmic-button w-fit flex items-center justify-center gap-2 mx-auto"
-            target="_blank"
-            href="https://github.com/ekamghotra"
-          >
-            Check My GitHub <ArrowRight size={16} />
-          </a>
-        </div>
+
       </div>
     </section>
   );

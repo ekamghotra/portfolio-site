@@ -3,40 +3,40 @@ import { cn } from "@/lib/utils";
 
 const skills = [
   // Languages
-  { name: "JavaScript", level: 90, category: "languages" },
+  { name: "Python", level: 90, category: "languages" },
+  { name: "SQL", level: 85, category: "languages" },
+  { name: "C/C++", level: 80, category: "languages" },
   { name: "Java", level: 85, category: "languages" },
-  { name: "Python", level: 80, category: "languages" },
-  { name: "R", level: 70, category: "languages" },
-  { name: "SQL", level: 80, category: "languages" },
-  { name: "C", level: 70, category: "languages" },
-  { name: "C++", level: 65, category: "languages" },
+  { name: "R", level: 75, category: "languages" },
 
-  // Libraries/Frameworks
-  { name: "Spring Boot", level: 75, category: "libraries/frameworks" },
-  { name: "AngularJS", level: 70, category: "libraries/frameworks" },
-  { name: "React", level: 75, category: "libraries/frameworks" },
-  { name: "TensorFlow", level: 70, category: "libraries/frameworks" },
-  { name: "Keras", level: 65, category: "libraries/frameworks" },
-  { name: "Scikit-Learn", level: 70, category: "libraries/frameworks" },
+  // Frameworks/Libraries
+  { name: "Pandas", level: 90, category: "frameworks/libraries" },
+  { name: "NumPy", level: 90, category: "frameworks/libraries" },
+  { name: "SciPy", level: 85, category: "frameworks/libraries" },
+  { name: "Statsmodels", level: 80, category: "frameworks/libraries" },
+  { name: "PyPortfolioOpt", level: 75, category: "frameworks/libraries" },
+  { name: "TensorFlow", level: 80, category: "frameworks/libraries" },
+  { name: "PyTorch", level: 75, category: "frameworks/libraries" },
+  { name: "TA-Lib", level: 70, category: "frameworks/libraries" },
+  { name: "Scikit-Learn", level: 85, category: "frameworks/libraries" },
+  { name: "Keras", level: 75, category: "frameworks/libraries" },
 
   // Tools
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "GitLab", level: 85, category: "tools" },
-  { name: "Docker", level: 80, category: "tools" },
-  { name: "MongoDB", level: 60, category: "tools" },
-  { name: "Gradle", level: 70, category: "tools" },
-  { name: "Postman", level: 75, category: "tools" },
-  { name: "DBeaver", level: 60, category: "tools" },
-  { name: "Snowflake", level: 60, category: "tools" },
-  { name: "Apache Airflow", level: 55, category: "tools" },
-  { name: "Tableau", level: 65, category: "tools" },
-  { name: "MATLAB", level: 70, category: "tools" },
-  { name: "IntelliJ", level: 80, category: "tools" },
+  { name: "MATLAB", level: 80, category: "tools" },
   { name: "VSCode", level: 95, category: "tools" },
-  { name: "Microsoft Azure", level: 70, category: "tools" },
+  { name: "IntelliJ", level: 85, category: "tools" },
+  { name: "RStudio", level: 80, category: "tools" },
+  { name: "Airflow", level: 75, category: "tools" },
+  { name: "Snowflake", level: 70, category: "tools" },
+  { name: "Azure", level: 75, category: "tools" },
+  { name: "AWS", level: 70, category: "tools" },
+  { name: "BigQuery", level: 65, category: "tools" },
+  { name: "MongoDB", level: 70, category: "tools" },
+  { name: "Tableau", level: 80, category: "tools" },
+  { name: "Docker", level: 75, category: "tools" },
 ];
 
-const categories = ["all", "languages", "libraries/frameworks", "tools"];
+const categories = ["all", "languages", "frameworks/libraries", "tools"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -60,7 +60,7 @@ export const SkillsSection = () => {
                 "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
                 activeCategory === category
                   ? "bg-primary text-primary-foreground"
-                  : "bg-secondary/70 text-forefround hover:bd-secondary"
+                  : "bg-secondary/70 text-foreground hover:bg-secondary"
               )}
             >
               {category}

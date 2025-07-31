@@ -4,31 +4,41 @@ export const ExperienceSection = () => {
   const experiences = [
     {
       id: 1,
-      title: "Software Engineer Intern @ Entegral - Enterprise Mobility",
-      subtitle: "Madison, WI | May - Aug 2025",
-      bullets: ["Bullet point with information to be added later"],
+      title: "Student Research @ UW-Madison Economics",
+      subtitle: "Madison, WI | Aug - Dec 2025",
+      bullets: [],
     },
     {
       id: 2,
-      title: "Machine Learning Engineer Intern @ Equii Foods",
-      subtitle: "Remote | Sep - Dec 2024",
+      title: "Software Engineer Intern @ Entegral - Enterprise Mobility",
+      subtitle: "Madison, WI | May - Aug 2025",
       bullets: [
-        "Fine tuning classification models to identify outlier proteins in prototype recipes of future food products using Python's Scikit-Learn, TensorFlow, and Keras",
+        "Migrated REST APIs from Jersey/Guice to Spring Boot 3, modernizing service layers to improve build times and streamline dependency injection",
+        "Developed an Automated VIN Capture Tool with Tesseract-OCR and a TensorFlow workflow that flags low-confidence reads with a Bayesian threshold, aiding a 70% reduction in manual data entry",
+        "Stored VIN-image hashes, capture time, and confidence scores in a MongoDB collection, providing adjusters ease of search for prior damage photos and reducing lookup time"
       ],
     },
     {
       id: 3,
-      title: "Data Engineer Intern @ Comcast EngOps",
-      subtitle: "San Francisco Bay Area | Jun - Aug 2024",
+      title: "Machine Learning Engineer Intern @ Equii Foods",
+      subtitle: "Remote | Sep - Dec 2024",
       bullets: [
-        "Utilized Microsoft & Oracle SQL servers in creating a seamless data warehouse integration framework, accessed through DBeaver for streamlined data management",
-        "Engineered scalable ETL pipelines with Python, SQL, and Apache Airflow, contributing to 20% improvement in data processing and subsequent modeling and Tableau dashboard construction time",
-        "Implemented Machine Learning powered predictive analytics solution for data quality and completeness checks, cutting necessary manual intervention by almost 50%",
+        "Part-Time Intern, fine-tuning Random Forest classifiers in scikit-learn to detect outlier proteins in prototype recipes, achieving 0.92 AUC and a false positives reduction",
       ],
     },
     {
       id: 4,
-      title: "Data Science Intern @ Manus Bio",
+      title: "Data Engineer Intern @ Comcast EngOps",
+      subtitle: "San Francisco Bay Area | Jun - Aug 2024",
+      bullets: [
+        "Analyzed field-active tech telemetry to pinpoint efficiency bottlenecks and reliability risks, collaborating with analysts and engineers to inform targeted process improvements",
+        "Engineered ELT pipelines with Apache Airflow, extracting from Microsoft and Oracle SQL servers into Snowflake and automating Tableau extracts, contributing to a 20% improvement in data processing and reporting time",
+        "Developed a data-quality framework using scikit-learn's Random Forest classifier to detect anomalies and missing values, integrated with Airflow to send automated alerts, contributing to on-team manual triage reduction of 30%",
+      ],
+    },
+    {
+      id: 5,
+      title: "Informatics Intern @ Manus Bio",
       subtitle: "Augusta, GA | Jun - Jul 2022",
       bullets: [
         "Aided computational biology team in parsing and analyzing DNA fingerprinting data in Python and R, primarily for genetic trait improvement and novel genetic sequence detection to design commercial & industrial bio-alternatives",
@@ -44,7 +54,7 @@ export const ExperienceSection = () => {
     <section id="experience" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          Professional <span className="text-primary">Experience</span>
+          Academic & Professional <span className="text-primary">Experience</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col space-y-4">
@@ -67,13 +77,15 @@ export const ExperienceSection = () => {
           <div className="space-y-4 flex flex-col items-center text-center">
             <h3 className="text-2xl font-semibold">{activeExp.title}</h3>
             <p className="text-muted-foreground">{activeExp.subtitle}</p>
-            <ul className="list-disc list-inside mt-4 space-y-2">
-              {activeExp.bullets.map((bullet, idx) => (
-                <li key={idx} className="text-muted-foreground">
-                  {bullet}
-                </li>
-              ))}
-            </ul>
+            {activeExp.bullets.length > 0 && (
+              <ul className="list-disc list-inside mt-4 space-y-2">
+                {activeExp.bullets.map((bullet, idx) => (
+                  <li key={idx} className="text-muted-foreground">
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       </div>

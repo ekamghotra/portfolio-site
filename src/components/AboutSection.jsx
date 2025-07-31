@@ -20,11 +20,11 @@ export const AboutSection = () => {
             </p>
 
             <p className="text-muted-foreground">
-              Over the past 3+ years, I've developed a deep expertise in building and deploying a variety of software, and have shifted my focus to applying statistical techniques and optimizing ML models in a software context. Going forward, my interests lie in applying my expertise to build scalable and efficient economic and financial models.
+              Over the past three years I've deepened my understanding of writing reliable software and training predictive models that stand up in production. I'm now channeling that skillset into a particular interest in model development. I'm applying to M.S. programs beginning Fall 2026 and am actively looking for roles starting Summer 2026.
             </p>
 
             <p className="text-muted-foreground">
-              I would love to connect regarding any New-Grad opportunities starting Summer 2026, feel free to reach out at eghotra@wisc.edu!
+              Feel free to send a connection or reach out at eghotra@wisc.edu!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -50,10 +50,7 @@ export const AboutSection = () => {
                   <BarChart2 className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Statistical Modeling</h4>
-                  <p className="text-muted-foreground">
-                    Applying advanced statistical techniques to analyze and model financial data for quantitative insights.
-                  </p>
+                  <h4 className="font-semibold text-2xl">Statistical Modeling</h4>
                 </div>
               </div>
             </div>
@@ -63,10 +60,7 @@ export const AboutSection = () => {
                   <Calculator className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Econometrics</h4>
-                  <p className="text-muted-foreground">
-                    Leveraging econometric methods to interpret economic data and build predictive financial models.
-                  </p>
+                  <h4 className="font-semibold text-2xl">Econometrics</h4>
                 </div>
               </div>
             </div>
@@ -76,10 +70,7 @@ export const AboutSection = () => {
                   <Code className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Software Development</h4>
-                  <p className="text-muted-foreground">
-                    Developing scalable and efficient software solutions for quantitative finance applications.
-                  </p>
+                  <h4 className="font-semibold text-2xl">Software Development</h4>
                 </div>
               </div>
             </div>
